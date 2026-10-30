@@ -14,8 +14,8 @@ npm start          # ws://localhost:8080
 `server.js` 상단의 상수를 수정하고 서버를 재시작합니다.
 
 ```js
-const ROBOT_COUNT = 50;   // 50 → 100 → 300 → 500 순서로 변경하며 측정
-const INTERVAL_MS = 10;   // 전송 주기 (초당 100회), 측정 중 고정
+const ROBOT_COUNT = 50;   // 50 -> 100 -> 300 -> 500 순서로 변경하며 측정
+const INTERVAL_MS = 10;   // 전송 주기 (초당 100회)
 ```
 
 ## 전송 데이터 형식

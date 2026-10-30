@@ -1,13 +1,13 @@
-// 방식 A (Baseline): 기본 React DOM
+// 방식 A 기본 React DOM
 // - Worker 없이 메인 스레드에서 WebSocket 수신 + JSON.parse
-// - 데이터가 올 때마다 setState → 로봇 N개 <div> 전체가 Virtual DOM diff 대상
-// - left/top으로 위치 지정 → 브라우저 reflow 발생
+// - 데이터가 올 때마다 setState -> 로봇 N개 <div> 전체가 Virtual DOM diff 대상
+// - left/top으로 위치 지정 -> 브라우저 reflow 발생
 import { useEffect, useState } from 'react';
 import { WS_URL } from '../config';
 import { stats } from '../stats';
 
 export const MethodA_ReactDom = () => {
-  const [robots, setRobots] = useState([]); // state → 바뀔 때마다 리렌더링
+  const [robots, setRobots] = useState([]); // state -> 바뀔 때마다 리렌더링
 
   useEffect(() => {
     const socket = new WebSocket(WS_URL);

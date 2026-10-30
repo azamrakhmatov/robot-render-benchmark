@@ -2,7 +2,7 @@
 
 | 파일 | 조건 | 내용 |
 |---|---|---|
-| monitor-A-500-4x.png | CPU 4x, 500대, 방식 A | Performance monitor: CPU 94%, Layouts/sec 56, Style recalcs 56. 10:43:40 지점이 다른 방식 → A 전환 순간 |
+| monitor-A-500-4x.png | CPU 4x, 500대, 방식 A | Performance monitor: CPU 94%, Layouts/sec 56, Style recalcs 56. 녹화 초반에 다른 방식에서 A로 전환한 구간 포함 |
 | monitor-B-500-4x.png | CPU 4x, 500대, 방식 B | Performance monitor: CPU 5~12%, Layouts 2(패널 갱신), heap 톱니(GC) 패턴 |
 | monitor-C-500-4x.png | CPU 4x, 500대, 방식 C | Performance monitor: CPU 11%, Layouts 2, heap 톱니 패턴 |
 | monitor-C-500-nothrottle.png | 제한 없음, 500대, 방식 C | 비교용: CPU 9.6%, DOM 58 |

@@ -1,11 +1,11 @@
 // 측정 패널: FPS, 프레임 시간 분포, Long Task, JS Heap 메모리, DOM 노드 수, 수신 로봇 수
 // 로봇 대수는 서버에서 받은 배열 길이(수신 로봇)로 자동 기록됨
-// 측정 결과는 "결과 복사" 버튼으로 CSV 한 줄로 복사 → docs/results.md 표에 바로 붙일 수 있음
+// 측정 결과는 "결과 복사" 버튼으로 CSV 한 줄로 복사 -> docs/results.md 표에 바로 붙일 수 있음
 //
-// 주의
+// 주의할점
 // - Heap은 Chrome 전용 performance.memory 사용. 메인 스레드 heap만 측정되며 Worker heap은 포함되지 않음
 //   (B/C 전체 메모리는 Chrome 작업 관리자(Shift+Esc)로 확인)
-// - heapMin은 측정 중 GC 직후의 최저값 → 실제 사용 메모리에 가까운 하한선. heapMax − heapMin ≈ GC 압력
+// - heapMin은 측정 중 GC 직후의 최저값 -> 실제 사용 메모리에 가까운 하한선. heapMax − heapMin = GC 압력
 import { useEffect, useRef, useState } from 'react';
 import { MEASURE_DURATION_MS } from './config';
 

@@ -1,7 +1,7 @@
-// 방식 B: Canvas 2D + Web Worker
+// 방식 B Canvas 2D + Web Worker
 // - WebSocket 수신과 JSON.parse는 Worker에서 처리 (메인 스레드 부담 감소)
-// - 최신 배열은 ref에만 저장 → React 리렌더링 없음
-// - requestAnimationFrame 루프에서 <canvas> 하나에 원을 직접 그림 (DOM 요소 0개)
+// - 최신 배열은 ref에만 저장 -> React 리렌더링 없음
+// - requestAnimationFrame 루프에서 <canvas> 하나에 원을 직접 그림 
 import { useEffect, useRef } from 'react';
 import { WS_URL } from '../config';
 import { stats } from '../stats';

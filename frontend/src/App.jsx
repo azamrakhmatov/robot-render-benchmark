@@ -1,5 +1,5 @@
 // 벤치마크 앱: 렌더링 방식(A/B/C) 선택
-// 로봇 대수는 backend/server.js의 ROBOT_COUNT 상수로 설정하고 서버를 재시작함 (50 → 100 → 300 → 500)
+// 로봇 대수는 backend/server.js의 ROBOT_COUNT 상수로 설정하고 서버를 재시작함 (50 -> 100 -> 300 -> 500)
 import { useState } from 'react';
 import { MethodA_ReactDom } from './viewers/MethodA_ReactDom';
 import { MethodB_Canvas } from './viewers/MethodB_Canvas';
@@ -18,7 +18,7 @@ const btn = (active, color) => ({
 });
 
 export default function App() {
-  const [mode, setMode] = useState('B'); // 초기 모드 B: 새로고침 시 A의 DOM 노드가 생성되지 않도록 (측정 정확도)
+  const [mode, setMode] = useState('B'); // 초기 모드
   const Active = METHODS.find((m) => m.key === mode).Component;
 
   return (

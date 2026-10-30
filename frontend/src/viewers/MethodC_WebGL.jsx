@@ -1,6 +1,6 @@
-// 방식 C: WebGL (Three.js) + Web Worker
+// 방식 C WebGL (Three.js) + Web Worker
 // - 데이터 수신 구조는 방식 B와 동일 (Worker + ref)
-// - 로봇마다 Mesh를 한 번만 생성하고, 매 프레임 위치/색만 갱신 → GPU가 그림
+// - 로봇마다 Mesh를 한 번만 생성하고, 매 프레임 위치/색만 갱신 -> GPU가 그림
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { WS_URL } from '../config';
@@ -9,7 +9,7 @@ import { stats } from '../stats';
 export const MethodC_WebGL = () => {
   const containerRef = useRef(null); // Three.js <canvas>를 담는 <div>
   const robotsRef = useRef([]);      // 최신 로봇 배열
-  const meshesRef = useRef({});      // 로봇 id → Mesh
+  const meshesRef = useRef({});      // 로봇 id -> Mesh
 
   useEffect(() => {
     const worker = new Worker(new URL('../worker.js', import.meta.url), { type: 'module' });
@@ -52,7 +52,7 @@ export const MethodC_WebGL = () => {
           scene.add(mesh);
           meshesRef.current[robot.id] = mesh;
         }
-        mesh.position.set(robot.x, height - robot.y, 0); // Canvas(Y 아래) → WebGL(Y 위) 좌표 변환
+        mesh.position.set(robot.x, height - robot.y, 0); // Canvas(Y 아래) -> WebGL(Y 위) 좌표 변환
         mesh.material = robot.status === 'ERROR' ? redMaterial : greenMaterial;
       });
 

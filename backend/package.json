@@ -1,0 +1,13 @@
+{
+  "name": "robot-benchmark-backend",
+  "version": "1.0.0",
+  "description": "가상 로봇 좌표를 WebSocket으로 전송하는 벤치마크용 테스트 서버",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}
